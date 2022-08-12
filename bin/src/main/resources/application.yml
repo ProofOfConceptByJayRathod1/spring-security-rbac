@@ -4,7 +4,7 @@ spring:
   datasource:
     username: sa
     password: password
-    url: jdbc:mysql://mysqldb:3306/spring-security-rbac?createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysql-standalone:3306/spring-security-rbac?createDatabaseIfNotExist=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   #JPA Hibernate
   jpa:

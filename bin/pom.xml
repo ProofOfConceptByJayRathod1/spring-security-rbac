@@ -65,34 +65,21 @@
 		<plugins>
 
 
-<!--			<plugin>-->
-<!--				&lt;!&ndash; Build an executable JAR &ndash;&gt;-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-jar-plugin</artifactId>-->
-<!--				<configuration>-->
-<!--					<archive>-->
-<!--						<manifest>-->
-<!--							<mainClass>com.springsecurity.rbac.springsecurityrbac.SpringSecurityRbacApplication</mainClass>-->
-<!--						</manifest>-->
-<!--					</archive>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
-
-
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- Build an executable JAR -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
 				<configuration>
-					<mainClass>com.springsecurity.rbac.springsecurityrbac.SpringSecurityRbacApplication</mainClass>
+					<archive>
+						<manifest>
+							<mainClass>com.springsecurity.rbac.springsecurityrbac.SpringSecurityRbacApplication</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
+
+
+
 
 
 			<plugin>
