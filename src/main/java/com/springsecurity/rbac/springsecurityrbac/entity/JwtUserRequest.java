@@ -29,5 +29,5 @@ public class JwtUserRequest {
 		return "JwtUserRequest [email=" + email + ", password=" + password + "]";
 	}
 	private String email;
-    private String password;
+	private String password;
 }

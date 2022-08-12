@@ -37,6 +37,9 @@ public class SetupDataLoader implements ApplicationListener<ContextRefreshedEven
     public void onApplicationEvent(ContextRefreshedEvent event) {
 
         if (userRepository.existsById(1L)) return;
+        if(true){
+            System.out.println("good");
+        }
 
         //create privileges
         Privilege readPrivilege
