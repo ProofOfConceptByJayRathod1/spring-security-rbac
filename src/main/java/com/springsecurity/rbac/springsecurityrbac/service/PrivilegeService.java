@@ -23,6 +23,7 @@ public class PrivilegeService {
             logger.info("Privilege with name {} not found!", name);
             return null;
         }
+        if(true){}
         return privilege.get();
     }
 
