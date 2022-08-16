@@ -50,11 +50,25 @@ pipeline{
 //     }
 
 
-      stage("deploy"){
-        steps {
-          echo 'deploying the application...'
-        }
-      }
+		stage('Login') {
+
+			steps {
+				bat "docker login -u=jayneversettle -p=746589@Jay"
+			}
+		}
+
+		stage('Push') {
+
+			steps {
+				bat "docker push jayneversettle/spring-security-rbac:latest"
+			}
+		}
+//
+//       stage("deploy"){
+//         steps {
+//           echo 'deploying the application...'
+//         }
+//       }
 
 
   }
