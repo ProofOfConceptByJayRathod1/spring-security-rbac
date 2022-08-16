@@ -30,14 +30,15 @@ pipeline{
 
       stage("buildspringbootapp") {
           steps {
-            echo 'building mysql'
+            echo 'building springboot'
             bat 'docker build . -t spring-security-rbac'
           }
         }
 
     stage('Prune Docker data') {
       steps {
-        bat 'docker system prune -a --volumes -f'
+      echo 'not pruning the container'
+//         bat 'docker system prune -a --volumes -f'
       }
     }
 
