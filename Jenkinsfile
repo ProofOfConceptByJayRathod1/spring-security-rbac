@@ -15,15 +15,31 @@ pipeline{
 
     stages{
 
-//        stage("verify tooling"){
-//             steps {
-//               sh '''
-//
-//               docker compose version
-//
-//               '''
-//             }
-//        }
+       stage("verify tooling"){
+            steps {
+              bat '''
+
+              docker compose version
+
+              '''
+            }
+       }
+
+
+  stage("build") {
+      steps {
+        echo 'installing maven'
+        bat 'mvn install'
+      }
+    }
+
+
+
+
+
+
+
+
 
     stage('Prune Docker data') {
       steps {
