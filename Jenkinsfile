@@ -31,7 +31,7 @@ pipeline{
       stage("buildspringbootapp") {
           steps {
             echo 'building mysql'
-            bat 'docker build -t spring-security-rbac'
+            bat 'docker build . -t spring-security-rbac'
           }
         }
 
