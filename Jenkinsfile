@@ -1,22 +1,5 @@
 pipeline{
-
-    agent {
-
-
-      dockerfile true
-
-    }
-
-//     environment{
-//
-//             MYSQL_DATABASE: 'spring-security-rbac'
-//             MYSQL_USER: 'sa'
-//             MYSQL_PASSWORD: 'password'
-//             MYSQL_ROOT_PASSWORD: 'password'
-//
-//     }
-
-
+    agent any
 
     stages{
 
@@ -31,14 +14,12 @@ pipeline{
             }
        }
 
-
   stage("build") {
       steps {
         echo 'installing maven'
         bat 'mvn install'
       }
     }
-
 
   stage("buildmysql") {
       steps {
@@ -53,14 +34,6 @@ pipeline{
             bat 'docker build -t spring-security-rbac'
           }
         }
-
-
-
-
-
-
-
-
 
     stage('Prune Docker data') {
       steps {
@@ -82,13 +55,6 @@ pipeline{
         }
       }
 
-//
-//     post {
-//       always {
-//         sh 'docker compose down --remove-orphans -v'
-//         sh 'docker compose ps'
-//       }
-//     }
 
   }
 
