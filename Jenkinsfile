@@ -60,7 +60,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				bat "docker push jayneversettle/spring-security-rbac:latest"
+				bat "docker push jayneversettle/rbac_server:latest"
 			}
 		}
 //
