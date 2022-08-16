@@ -2,14 +2,14 @@ pipeline{
 
     agent any
 
-    environment{
-
-            MYSQL_DATABASE: 'spring-security-rbac'
-            MYSQL_USER: 'sa'
-            MYSQL_PASSWORD: 'password'
-            MYSQL_ROOT_PASSWORD: 'password'
-
-    }
+//     environment{
+//
+//             MYSQL_DATABASE: 'spring-security-rbac'
+//             MYSQL_USER: 'sa'
+//             MYSQL_PASSWORD: 'password'
+//             MYSQL_ROOT_PASSWORD: 'password'
+//
+//     }
 
 
 
