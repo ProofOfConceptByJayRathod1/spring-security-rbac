@@ -38,7 +38,7 @@ public class SetupDataLoader implements ApplicationListener<ContextRefreshedEven
 
         if (userRepository.existsById(1L)) return;
         if(true){
-            System.out.println("good");
+            System.out.println("Cicdtest");
         }
 
         //create privileges
