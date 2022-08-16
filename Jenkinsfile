@@ -47,20 +47,13 @@ pipeline{
       }
     }
 
-      stage("build springbootapp") {
+      stage("buildspringbootapp") {
           steps {
             echo 'building mysql'
             bat 'docker build -t spring-security-rbac'
           }
         }
 
-
-      stage("build") {
-          steps {
-            echo 'installing maven'
-            bat 'docker run --name mysqldb -e MYSQL_DATABASE=spring-security-rbac -e MYSQL_USER=sa -e MYSQL_PASSWORD=password -e MYSQL_ROOT_PASSWORD=password -d mysql:5.6'
-          }
-        }
 
 
 
