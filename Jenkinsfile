@@ -1,6 +1,11 @@
 pipeline{
 
-    agent any
+    agent {
+
+
+      dockerfile true
+
+    }
 
 //     environment{
 //
