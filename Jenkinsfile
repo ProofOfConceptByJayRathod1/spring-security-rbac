@@ -15,15 +15,15 @@ pipeline{
 
     stages{
 
-       stage("verify tooling"){
-            steps {
-              sh '''
-
-              docker compose version
-
-              '''
-            }
-       }
+//        stage("verify tooling"){
+//             steps {
+//               sh '''
+//
+//               docker compose version
+//
+//               '''
+//             }
+//        }
 
     stage('Prune Docker data') {
       steps {
